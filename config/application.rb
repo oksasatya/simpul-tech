@@ -6,6 +6,7 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module SimpulApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -28,5 +29,6 @@ module SimpulApp
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.action_cable.mount_path = "/cable"
   end
 end

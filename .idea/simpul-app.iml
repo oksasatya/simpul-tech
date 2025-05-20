@@ -107,6 +107,8 @@
     <orderEntry type="library" scope="PROVIDED" name="rainbow (v3.1.1, ruby-3.4.4-p34) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.2.1, ruby-3.4.4-p34) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v6.14.0, ruby-3.4.4-p34) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redis (v5.4.0, ruby-3.4.4-p34) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="redis-client (v0.24.0, ruby-3.4.4-p34) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.10.0, ruby-3.4.4-p34) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.6.1, ruby-3.4.4-p34) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rubocop (v1.75.6, ruby-3.4.4-p34) [gem]" level="application" />
