@@ -11,9 +11,13 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :users, only: [ :create, :index ]
-      resources :rooms, only: [ :index, :create, :show ]
-      resources :messages, only: [ :create, :index ]
+      resources :users, only: [:create, :index]
+      resources :rooms, only: [:index, :create, :show]
+      resources :messages, only: [:create, :index]
+
+      post "rooms/find_or_create", to: "rooms#find_or_create"
+
+      get "users/chat_partners", to: "users#chat_partners"
     end
   end
 end

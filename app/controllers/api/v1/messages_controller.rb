@@ -6,7 +6,7 @@ class Api::V1::MessagesController < ApplicationController
       user: message.user.username,
       content: message.content,
       room_id: message.room_id,
-      created_at: message.created_at.strftime("%H:%M"),
+      time: message.created_at.iso8601
     }
   end
 
@@ -26,7 +26,7 @@ class Api::V1::MessagesController < ApplicationController
       id: msg.id,
       user: msg.user.username,
       content: msg.content,
-      time: msg.created_at.strftime("%H:%M"),
+      time: msg.created_at.iso8601
     }
   end
 end

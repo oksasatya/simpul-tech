@@ -43,6 +43,7 @@ group :development, :test do
   gem "brakeman", require: false
   gem "dotenv-rails"
   gem "redis", "~> 5.0"
+  gem "rack-cors"
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 end
