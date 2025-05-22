@@ -87,7 +87,7 @@ Rails.application.configure do
     "https://simpul-app-fe.vercel.app"
   ]
   config.cache_store = :redis_cache_store, { url: ENV["REDIS_URL"] }
-  config.hosts << /10\.41\..*/
+  # config.hosts << /10\.41\..*/
   # config.hosts << "api.chasastore.com"
   config.hosts << "simpul-tech-production.up.railway.app"
   config.hosts << /.*\.internal/
