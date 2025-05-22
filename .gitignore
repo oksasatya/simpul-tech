@@ -32,3 +32,4 @@
 /config/master.key
 secret.yaml
 configmap.yaml
+/k8s/secret.yaml

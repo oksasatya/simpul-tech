@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: simpul-seed-job
+spec:
+  template:
+    spec:
+      nodeSelector:
+        topology.kubernetes.io/zone: asia-southeast2-b
+      containers:
+        - name: simpul-seed
+          image: gcr.io/simpul-app-backend/simpul_app:latest
+          imagePullPolicy: Always
+          command: ["sh", "-c", "bundle exec rails db:prepare && bundle exec rails db:seed"]
+          envFrom:
+          - configMapRef:
+              name: app-config
+          - secretRef:
+              name: app-secret
+          env:
+            - name: DISABLE_BROADCAST
+              value: "true"
+
+      restartPolicy: Never
+  backoffLimit: 1
+

@@ -84,5 +84,5 @@ Rails.application.configure do
 
   config.action_cable.url = ENV["ACTION_CABLE_FRONTEND_URL"]
   config.action_cable.allowed_request_origins = [ "https://simpul-app-fe.vercel.app" ]
-  frontend_host = ENV.fetch("FRONTEND_HOST", "simpul-app-fe.vercel.app")
+  config.cache_store = :redis_cache_store, { url: ENV["REDIS_URL"] }
 end
