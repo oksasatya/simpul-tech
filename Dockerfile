@@ -53,4 +53,4 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 
 # Start via Thruster (for production)
 EXPOSE 80
-CMD ["./bin/thrust", "./bin/rails", "server"]
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]

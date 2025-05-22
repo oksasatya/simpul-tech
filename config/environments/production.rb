@@ -85,4 +85,7 @@ Rails.application.configure do
   config.action_cable.url = ENV["ACTION_CABLE_FRONTEND_URL"]
   config.action_cable.allowed_request_origins = [ "https://simpul-app-fe.vercel.app" ]
   config.cache_store = :redis_cache_store, { url: ENV["REDIS_URL"] }
+  config.hosts << /10\.41\..*/
+  config.hosts << "api.chasastore.com"
+  config.hosts << /.*\.internal/
 end

@@ -16,7 +16,7 @@ spec:
         - name: simpul-app
           image: gcr.io/simpul-app-backend/simpul_app:latest
           ports:
-            - containerPort: 80
+            - containerPort: 3000
           envFrom:
             - configMapRef:
                 name: app-config

@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: simpul-cert-fresh
+spec:
+  domains:
+    - api.chasastore.com

@@ -1,14 +1,14 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: simpul-ingress
+  name: simpul-ingress-fresh
   annotations:
     kubernetes.io/ingress.class: "gce"
     kubernetes.io/ingress.global-static-ip-name: simpul-ingress-ip-new
-    networking.gke.io/managed-certificates: simpul-cert-v2
+    networking.gke.io/managed-certificates: simpul-cert-fresh
     ingress.gcp.kubernetes.io/ssl-redirect: "true"
   labels:
-    trigger-refresh: "now-202505221920"
+    refresh-trigger: "fresh-20250522"
 spec:
   rules:
     - host: api.chasastore.com

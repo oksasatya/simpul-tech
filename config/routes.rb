@@ -6,14 +6,14 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root to: proc { [ 200, {}, [ 'OK' ] ] }
   mount ActionCable.server => "/cable"
 
   namespace :api do
     namespace :v1 do
-      resources :users, only: [:create, :index]
-      resources :rooms, only: [:index, :create, :show]
-      resources :messages, only: [:create, :index]
+      resources :users, only: [ :create, :index ]
+      resources :rooms, only: [ :index, :create, :show ]
+      resources :messages, only: [ :create, :index ]
 
       post "rooms/find_or_create", to: "rooms#find_or_create"
 
